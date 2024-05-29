@@ -33,4 +33,23 @@ document.addEventListener("DOMContentLoaded", function () {
       productDetails.innerHTML = "<p>Product not found.</p>";
     }
   }
+  // Sign-In Form Submission Handling
+  const signInForm = document.getElementById("sign-in-form");
+  if (signInForm) {
+    signInForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // Basic form validation
+      if (email === "" || password === "") {
+        alert("Please fill in all fields.");
+      } else {
+        alert(`Signed in with email: ${email}`);
+        // Here you can add further sign-in logic like sending the data to a server
+      }
+    });
+  }
 });
+
+
